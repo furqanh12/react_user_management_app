@@ -6,7 +6,7 @@ const Table = () => {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>No.</th>
+            <th>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>

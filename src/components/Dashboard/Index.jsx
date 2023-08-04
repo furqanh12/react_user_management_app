@@ -4,11 +4,10 @@ import Header from "./Header";
 
 export const Index = () => {
   return (
-  <div>
-    <Header/>
-    <Table/>
+    <div>
+      <Header />
+      <Table />
     </div>
-  )
-
+  );
 };
 // export default Index;

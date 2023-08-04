@@ -1,10 +1,10 @@
 const usersData = [
   {
     id: 1,
-    firstName: "Susan",
-    lastName: "Jordon",
+    firstName: "Muhammad",
+    lastName: "Umar",
     email: "susan@example.com",
-    salary: "95000",
+    salary: "195000",
     date: "2019-04-11",
   },
   {
