@@ -54,6 +54,50 @@ const Table = () => {
           </tbody>
         </table>
       </div>
+      <div className="container mx-auto">
+        <div className="text-white py-5 gap-5 grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1">
+          <div className="bg-[green] p-5 text-center col-span-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+          <div className="bg-[green] p-5 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+            doloribus fugit aspernatur, accusamus hic excepturi in vel error
+            expedita quos.
+          </div>
+        </div>
+      </div>
     </>
   );
 };

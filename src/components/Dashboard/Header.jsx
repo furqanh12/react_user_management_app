@@ -9,22 +9,10 @@ export default function Header() {
     alert("form submitted");
   };
   const length = usersData.length;
-  tailwind.config = {
-    theme: {
-      extend: {
-        screens: {
-          sm: { max: "767px" },
-        },
-        colors: {
-          new_color: "#62c4f0",
-        },
-      },
-    },
-  };
   return (
-    <div>
+    <div className="container mx-auto">
       <header>
-        <h1 className="text-new_color xl:text-right lg:text-center md:text-left sm:text-center">
+        <h1 className="text-fuchsia-900 sm:text-center md:text-left lg:text-center xl:text-right">
           Users Management Software
         </h1>
         <div
