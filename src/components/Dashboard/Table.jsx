@@ -1,10 +1,96 @@
-import React from "react";
-import usersData from "../data";
+import React, { useEffect, useState } from "react";
+import Form from "react-bootstrap/Form";
 const Table = () => {
+  const [data, setData] = useState([]);
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [salary, setSalary] = useState();
+  const [date, setDate] = useState();
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/users")
+      .then((res) => setData(res.data))
+      .catch((er) => console.log(er));
+  }, []);
+  const length = data.length;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const id = data.length + 1;
+    axios
+      .post("http://localhost:3000/users", {
+        id: id,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        salary: salary,
+        date: date,
+      })
+      .then((res) => {
+        location.reload();
+      })
+      .catch((er) => console.log(er));
+  };
+  const handleDelete = (id) => {
+    axios
+      .delete("http://localhost:3000/users/" + id)
+      .then((res) => {
+        location.reload();
+      })
+      .catch((er) => console.log(er));
+  };
   return (
     <>
+      <div className="container-fluid">
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Control
+              type="text"
+              placeholder="Enter first name"
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+            <Form.Control
+              type="text"
+              placeholder="Enter last name"
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
+            <Form.Control
+              type="tel"
+              placeholder="Enter salary"
+              onChange={(e) => setSalary(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
+            <Form.Control
+              type="date"
+              placeholder="Enter joining date"
+              onChange={(e) => setDate(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <button className="btn btn-primary">Add Employee</button>
+        </Form>
+      </div>
+      <p className="my-5">
+        Total Employees: <strong>{length}</strong>
+      </p>
       <div className="table-responsive">
-        <table className="table table-striped">
+        <table className="table table-striped table-bordered">
           <thead>
             <tr>
               <th>Id</th>
@@ -19,26 +105,18 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-            {usersData.length > 0 ? (
-              usersData.map((usersData) => (
-                <tr key={usersData.id}>
-                  <td>{usersData.id}</td>
-                  <td>{usersData.firstName}</td>
-                  <td>{usersData.lastName}</td>
-                  <td>{usersData.email}</td>
-                  <td>{usersData.salary}</td>
-                  <td>{usersData.date}</td>
+            {data.length > 0 ? (
+              data.map((data) => (
+                <tr key={data.id}>
+                  <th>{data.id}</th>
+                  <td>{data.firstName}</td>
+                  <td>{data.lastName}</td>
+                  <td>{data.email}</td>
+                  <td>{data.salary}</td>
+                  <td>{data.date}</td>
                   <td className="">
                     <button
-                      onClick={() => handleEdit(employee.id)}
-                      className="btn btn-success"
-                    >
-                      Edit
-                    </button>
-                  </td>
-                  <td className="">
-                    <button
-                      onClick={() => handleDelete(employee.id)}
+                      onClick={() => handleDelete(data.id)}
                       className="btn btn-danger"
                     >
                       Delete
@@ -53,50 +131,6 @@ const Table = () => {
             )}
           </tbody>
         </table>
-      </div>
-      <div className="container mx-auto">
-        <div className="text-white py-5 gap-5 grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1">
-          <div className="bg-[green] p-5 text-center col-span-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-          <div className="bg-[green] p-5 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            doloribus fugit aspernatur, accusamus hic excepturi in vel error
-            expedita quos.
-          </div>
-        </div>
       </div>
     </>
   );

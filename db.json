@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Adil",
+      "lastName": "Hussain",
+      "email": "adil.hussain@isoftstudios.com",
+      "salary": "195000",
+      "date": "2019-04-11"
+    },
+    {
+      "id": 2,
+      "firstName": "Muhammad",
+      "lastName": "Umar",
+      "email": "muhammad.umar@isoftstudios.com",
+      "salary": "80000",
+      "date": "2019-04-17"
+    },
+    {
+      "id": 3,
+      "firstName": "Ammar",
+      "lastName": "Khalid",
+      "email": "ammar.khalid@isoftstudios.com",
+      "salary": "79000",
+      "date": "2019-05-01"
+    },
+    {
+      "id": 4,
+      "firstName": "Zaka",
+      "lastName": "Ullah",
+      "email": "Zakaullah@isoftstudios.com",
+      "salary": "56000",
+      "date": "2019-05-03"
+    },
+    {
+      "id": 5,
+      "firstName": "Zaka",
+      "lastName": "Ahmad",
+      "email": "zaka.ahmad@isoftstudios.com",
+      "salary": "65000",
+      "date": "2019-06-13"
+    },
+    {
+      "id": 6,
+      "firstName": "Muhammad",
+      "lastName": "Jahanzaib",
+      "email": "muhammad.jahanzaib@isoftstudios.com",
+      "salary": "120000",
+      "date": "2019-07-30"
+    },
+    {
+      "id": 7,
+      "firstName": "Kamran",
+      "lastName": "Shehzad",
+      "email": "kamran.Shehzad@isoftstudios.com",
+      "salary": "90000",
+      "date": "2019-08-15"
+    },
+    {
+      "id": 8,
+      "firstName": "Muhammad",
+      "lastName": "Waqas",
+      "email": "muhammad.waqas@isoftstudios.com",
+      "salary": "60000",
+      "date": "2019-10-10"
+    },
+    {
+      "id": 9,
+      "firstName": "Muhammad",
+      "lastName": "Salman",
+      "email": "muhammad.salman@isoftstudios.com",
+      "salary": "71000",
+      "date": "2019-10-15"
+    },
+    {
+      "id": 10,
+      "firstName": "Shazma",
+      "lastName": "Shahid",
+      "email": "shazma.shahid@isoftstudios.com",
+      "salary": "110000",
+      "date": "2020-01-15"
+    },
+    {
+      "id": 11,
+      "firstName": "Aqsa",
+      "lastName": "Jabbar",
+      "email": "aqsa.jabbar@isoftstudios.com",
+      "salary": "110000",
+      "date": "2020-01-15"
+    },
+    {
+      "id": 12,
+      "firstName": "Aqsa",
+      "lastName": "Altaf",
+      "email": "aqsa.altaf@isoftstudios.com",
+      "salary": "110000",
+      "date": "2020-01-15"
+    },
+    {
+      "id": 13,
+      "firstName": "Aqsa",
+      "lastName": "Ishfaq",
+      "email": "aqsa.ishfaq@isoftstudios.com",
+      "salary": "110000",
+      "date": "2020-01-15"
+    },
+    {
+      "id": 14,
+      "firstName": "Seemal",
+      "lastName": "Shehzad",
+      "email": "seemal.shehzad@isoftstudios.com",
+      "salary": "110000",
+      "date": "2020-01-15"
+    }
+  ]
+}
